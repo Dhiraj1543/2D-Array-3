@@ -24,3 +24,19 @@ void setZeroes(vector<vector<int>>& matrix) {
         if(col0 == 0) matrix[i][0] = 0;
     }
 }
+
+void printMatrix(vector<vector<int>>& matrix) {
+    for (auto &row : matrix) {
+        for (int &elem : row) {
+            cout << elem << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    vector<vector<int>> matrix = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+    setZeroes(matrix);
+    printMatrix(matrix);
+    return 0;
+}
